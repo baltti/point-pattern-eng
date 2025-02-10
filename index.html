@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>Пространственная регрессия</title>
+    <title>Point pattern analysis</title>
     <link rel="stylesheet" href="dist/reveal.css" />
     <link rel="stylesheet" href="dist/theme/simple.css" id="theme" />
     <link rel="stylesheet" href="plugin/highlight/monokai.css" />
@@ -671,6 +671,20 @@ https://mgimond.github.io/Spatial/chp11_0.html <!-- .element: style="font-size: 
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
+<img src="Pasted image 20250210123502.png" alt="" style="object-fit: scale-down">
+
+
+<div class="" style="position: absolute; left: 0%; top: 70%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
+
+https://geographicdata.science/book/notebooks/08_point_pattern_analysis.html <!-- .element: style="font-size: 15px" -->
+</div>
+<div class="" style="position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+© 2025 Балтыжакова Т.И.<!-- .element: style="font-size: 10px" -->
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
 <img src="Pasted image 20250204135055.png" alt="" style="object-fit: scale-down">
 
 
@@ -818,18 +832,20 @@ https://mgimond.github.io/Spatial/chp11_0.html <!-- .element: style="font-size: 
 
 <div class="block">
 
-`$K(d)=\dfrac { \sum_{n=1}^{i} N_{S_i}}{d} \div \hat \lambda$`
+`$K(d)=\dfrac { \sum_{n=1}^{i} N_{d}}{\hat \lambda} $`
 
 <div class="block">
 
-`$N_{S_i}$` - количество точек в определенном радиусе от точки `$S_i$`,
+`$N_{d}$` - number of observations within the certain distance (`$d$`) from `$S_i$`,
 
-`$d$` - количество используемых радиусов (интервалов расстояния),
-
-`$\hat \lambda$` - глобальная плотность.
+`$\hat \lambda$` - global density.
 </div>
 
  <!-- .element: style="font-size: 30px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left" -->
+
+<div class="block">
+
+`$K(d)_{expected}=\pi d^2$`
 
 <div class="" style="padding: 0 10px; box-sizing: border-box; position: absolute; left: 0%; top: 70%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
 
@@ -856,11 +872,19 @@ https://mgimond.github.io/Spatial/chp11_0.html <!-- .element: style="font-size: 
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-<div class="" style="" drag="150 100">
+<div class="" style="position: absolute; left: -52%; top: -20%; height: 100%; width: 150%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
 
 <img src="Pasted image 20250204154020.png" alt="" style="object-fit: scale-down">
 
 </div>
+
+<div class="" style="position: absolute; left: 20%; top: 0%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src="Pasted image 20250210122512.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+<div class="" style="position: absolute; left: 0%; top: 55%; height: 50%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
 
 <div class="block">
 
@@ -870,6 +894,7 @@ In our example, the stores appear to be more clustered than expected at distance
 </div>
 
  <!-- .element: style="font-size: 25px" -->
+</div>
 
 <div class="" style="padding: 0 10px; box-sizing: border-box; position: absolute; left: 0%; top: 70%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
 
@@ -1337,6 +1362,37 @@ source: https://boosty.to/geoanalytics/posts/e42ddcea-e99d-46fd-b597-58af55ef500
 <!-- .element: style="font-size: 15px" -->
 </div>
 
+
+<div class="" style="position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+© 2025 Балтыжакова Т.И.<!-- .element: style="font-size: 10px" -->
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Additional reading<!-- .element: style="font-size: 40px" -->
+
+<div class="" style="" drag="100 100">
+
+<div class="block">
+
+1. [Chapter 'Point pattern analysis' in "Geographic data science"](https://geographicdata.science/book/notebooks/08_point_pattern_analysis.html)
+2. [Chapter 'Point pattern analysis' in "Intro to GIS and Spatial Analysis"](https://mgimond.github.io/Spatial/index.html)
+3. [Point pattern (russian resource)](https://tsamsonov.github.io/r-spatstat-course/points.html#%D1%82%D0%BE%D1%87%D0%B5%D1%87%D0%BD%D1%8B%D0%B5-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D1%8B)
+4. [Point pattern analysis](https://gistbok.ucgis.org/bok-topics/point-pattern-analysis)
+5. [Point patterns](https://storymaps.arcgis.com/stories/2d7ebcc8ae5c4df3b8ad56a3e9a82317)
+6. [Classification and clusterisation](https://gistbok.ucgis.org/bok-topics/classification-and-clustering)
+7. Spatial data clusterisation (russian) [part 1](https://cartetika.ru/tpost/uun5jy5tk1-klasterizatsiya-prostranstvennih-dannih), [part 2](https://cartetika.ru/tpost/k05o2ndpf1-klasterizatsiya-prostranstvennih-dannih), [part 3](https://cartetika.ru/tpost/xbr62rng41-osobennosti-klasterizatsii-prostranstven)
+8. [DBSCAN clusterisation (russian)](https://habr.com/ru/articles/322034/)
+9. [Interactive DBSCAN demo](https://www.naftaliharris.com/blog/visualizing-dbscan-clustering/)
+10. [Spatial data clusterisation](https://www.youtube.com/watch?v=fd04Ktiu2Hk&ab_channel=DataScienceInEverydayLife)
+11. [Clusterisation on python (russian)](https://habr.com/ru/articles/798331/)
+12. [К-function and kernel density estimation](https://storymaps.arcgis.com/stories/728743b4ae534275a22a15b19e0e781f)
+
+</div>
+
+ <!-- .element: style="font-size: 30px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left" -->
+</div>
 
 <div class="" style="position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
 
